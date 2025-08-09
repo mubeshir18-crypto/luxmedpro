@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxMedPro – Patient Lead Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hero section introducing the offer -->
+    <section class="hero">
+        <h1>Fill Your Schedule With New Patients — Done For You</h1>
+        <p>
+            We deliver 20–50 ready‑to‑book patients every month to your med spa or surgery clinic. Guaranteed results or we work for free.
+        </p>
+        <!-- Pricing emphasised up front to set expectations -->
+        <p style="font-size:1.5rem; font-weight:700; margin-bottom:25px;">$5,000<span style="font-size:1rem; font-weight:400;">/month</span></p>
+        <!-- PayPal subscription button. Replace YOUR_PAYPAL_EMAIL with your PayPal account email before deployment. -->
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="margin-bottom: 40px;">
+            <input type="hidden" name="cmd" value="_xclick-subscriptions">
+            <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL">
+            <input type="hidden" name="item_name" value="LuxMedPro Patient Leads Subscription">
+            <input type="hidden" name="currency_code" value="USD">
+            <!-- Recurring payment amount: $5,000 per month -->
+            <input type="hidden" name="a3" value="5000.00">
+            <input type="hidden" name="p3" value="1">
+            <input type="hidden" name="t3" value="M">
+            <input type="hidden" name="src" value="1">
+            <input type="hidden" name="sra" value="1">
+            <!-- Redirect after successful payment -->
+            <input type="hidden" name="return" value="thank_you.html">
+            <input type="hidden" name="cancel_return" value="index.html">
+            <button type="submit" class="cta-button">Get Started — $5,000/month</button>
+        </form>
+    </section>
+
+    <!-- Benefits section explaining why the offer is valuable -->
+    <section class="benefits">
+        <h2>Why Choose LuxMedPro?</h2>
+        <ul class="benefit-list">
+            <li><strong>Done‑for‑You Marketing:</strong> We create and manage all campaigns so you don’t have to.</li>
+            <li><strong>High‑Value Patients:</strong> Our targeting focuses on patients ready to book premium treatments.</li>
+            <li><strong>Guaranteed Results:</strong> If we don’t hit your lead target, we work for free until we do.</li>
+            <li><strong>No Long‑Term Contracts:</strong> Stay with us only if you’re thrilled with the results.</li>
+        </ul>
+    </section>
+
+    <!-- Process section explaining the simple steps to success -->
+    <section class="process">
+        <h2>How It Works</h2>
+        <ol class="process-list">
+            <li>Sign up and complete a short onboarding form.</li>
+            <li>We launch targeted ads and optimized funnels for your clinic.</li>
+            <li>Qualified patients book consultations and treatments directly with you.</li>
+            <li>You grow your revenue while we handle everything behind the scenes.</li>
+        </ol>
+    </section>
+
+    <!-- Blog preview section to drive visitors to free content and extra monetisation -->
+    <section class="services">
+        <h2>Marketing Insights</h2>
+        <p style="text-align:center; margin-bottom:30px; color:var(--secondary-color);">
+            Browse our latest tips for scaling your cosmetic practice — even if you’re not ready for our done‑for‑you service.
+        </p>
+        <div class="service-cards blog-cards">
+            <div class="service-card">
+                <h3>Lead Generation Basics</h3>
+                <p>How to craft irresistible offers that fill your calendar.</p>
+                <a href="blog/index.html" class="cta-button secondary">Read More</a>
+            </div>
+            <div class="service-card">
+                <h3>Scaling Med Spa Revenue</h3>
+                <p>Steps to multiply your clinic revenue without extra work.</p>
+                <a href="blog/index.html" class="cta-button secondary">Read More</a>
+            </div>
+            <div class="service-card">
+                <h3>Retention Strategies</h3>
+                <p>Keep your patients coming back with loyalty and upsell techniques.</p>
+                <a href="blog/index.html" class="cta-button secondary">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with legal links -->
+    <footer class="footer">
+        <p>© 2025 LuxMedPro. All Rights Reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms</a> | <a href="refund.html">Refund Policy</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,235 @@
+/*
+ * Style sheet for LuxMedPro – minimalist black/white design
+ *
+ * This CSS borrows from the prior private_medical_site styles to ensure a clean,
+ * professional appearance. Colours and spacing are tuned to showcase the offer
+ * and guide visitors toward the call‑to‑action without distraction.
+ */
+
+:root {
+  /* Primary palette for a clean, minimalist look */
+  --primary-color: #000000;     /* Black for headings and primary text */
+  --secondary-color: #666666;   /* Mid‑grey for secondary elements */
+  --accent-color: #000000;      /* Black for call‑to‑action buttons */
+  --light-color: #ffffff;       /* White background for most sections */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--light-color);
+  color: var(--primary-color);
+}
+
+/* Hero section */
+.hero {
+  background: var(--light-color);
+  color: var(--primary-color);
+  padding: 100px 20px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+/* Call‑to‑action buttons */
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+.cta-button:hover {
+  background-color: #333333;
+}
+.cta-button.secondary {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+}
+.cta-button.secondary:hover {
+  background-color: #333333;
+}
+
+/* Sections */
+.services,
+.benefits,
+.process,
+.contact {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.services h2,
+.benefits h2,
+.process h2,
+.contact h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Benefit list */
+.benefit-list {
+  list-style: none;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.benefit-list li {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+.benefit-list strong {
+  color: var(--primary-color);
+}
+
+/* Process list (ordered list) */
+.process-list {
+  max-width: 800px;
+  margin: 0 auto;
+  counter-reset: step;
+}
+.process-list li {
+  margin-bottom: 20px;
+  padding-left: 50px;
+  position: relative;
+  font-size: 1.1rem;
+}
+.process-list li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Service cards grid used for blog previews */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.service-card {
+  background-color: #f9f9f9;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+.service-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.service-card p {
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+/* Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.contact-form button {
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+.footer a {
+  color: #ffffff;
+  text-decoration: underline;
+  margin: 0 5px;
+}
+.footer a:hover {
+  text-decoration: none;
+}
+
+/* Blog adjustments */
+.blog-cards .service-card {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  padding: 0;
+}
+.blog-cards .cta-button.secondary {
+  margin-top: 10px;
+}
+
+/* Responsive typography */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
